@@ -1,5 +1,8 @@
 package edu.kis.vh.nursery;
 
+/**
+ * Klasa tworząca wyliczankę jako kolejkę FIFO
+ */
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
     private DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
@@ -9,6 +12,11 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
     }
 
 
+    /**
+     * Podaje element z wyliczanki
+     *
+     * @return Element z wyliczanki, -1 jeżeli jest pusta
+     */
     @Override
     public int countOut() {
         while (!callCheck())
